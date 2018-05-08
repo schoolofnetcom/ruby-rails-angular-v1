@@ -45,9 +45,9 @@ angular
     }])
     
     // PRODUCT CREATE
-    .controller('ProductAddCtrl', ['$scope', 'Product', '$location', function($scope, Product, $location){
+    .controller('ProductAddCtrl', ['$scope', 'Products', '$location', function($scope, Products, $location){
         $scope.create = function(data){
-            Product.create({
+            Products.create({
                 product: data
             }).$promise.then(function(data){
                 console.log(data)
