@@ -1,0 +1,23 @@
+<h3>List of products</h3>
+<a href="#!/products/new">New product</a>
+<table>
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Quantity</td>
+            <td>Price</td>
+            <td>Actions</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr data-ng-repeat="product in products">
+            <td>{{product.id}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.quantity}}</td>
+            <td>{{product.price}}</td>
+            <td><button type="button" data-ng-click="remove(product.id)">Delete</button></td>
+            <td><button type="button" data-ng-click="edit(product.id)">Edit</button></td>
+        </tr>
+    </tbody>
+</table>
